@@ -44,7 +44,7 @@ class HomeView extends GetView<HomeController> {
       ],
       backgroundColor: primaryBlue,
       elevation: 0,
-    )
+    ),
     );
   }
 }

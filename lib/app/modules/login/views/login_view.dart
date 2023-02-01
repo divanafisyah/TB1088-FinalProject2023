@@ -12,11 +12,7 @@ class LoginView extends GetView<LoginController> {
         "assets/images/logo_splash.png",
       ),
       Text(
-        "Silahkan masuk dengan email anda",
-        textAlign: TextAlign.center,
-      ),
-      Text(
-        "Email",
+        "Silahkan masukan username anda",
         textAlign: TextAlign.center,
       ),
       Container(
@@ -31,17 +27,12 @@ class LoginView extends GetView<LoginController> {
           ),
         ),
       ),
-      Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(10.0)),
-          color: Color.fromARGB(255, 23, 141, 251),
-        ),
-        child: Padding(
-          padding: EdgeInsets.all(16.0),
-          child: Text(
-            'Informasi',
-            style: TextStyle(fontSize: 16.0, color: Colors.white),
-          ),
+      TextButton(
+        onPressed: () {},
+        child: Text('Click here to login'),
+        style: TextButton.styleFrom(
+          padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+          primary: Colors.teal,
         ),
       ),
     ]));
