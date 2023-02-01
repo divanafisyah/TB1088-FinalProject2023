@@ -1,8 +1,6 @@
 import 'package:final_project_2023/app/widgets/splash.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
 import 'app/routes/app_pages.dart';
 void main() {
   runApp(Cleanin());
