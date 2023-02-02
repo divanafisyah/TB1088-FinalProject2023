@@ -1,6 +1,14 @@
+import 'package:final_project_2023/app/modules/home/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' show GetView;
 import '../controllers/login_controller.dart' show LoginController;
+
+void main() {
+  runApp(new MaterialApp(home: new LoginView(), routes: <String, WidgetBuilder>{
+    '/login': (context) => new LoginView(),
+    '/home': (context) => new HomeView(),
+  }));
+}
 
 class LoginView extends GetView<LoginController> {
   const LoginView({Key? key}) : super(key: key);
@@ -28,7 +36,9 @@ class LoginView extends GetView<LoginController> {
         ),
       ),
       TextButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, '/home');
+        },
         child: Text('Click here to login'),
         style: TextButton.styleFrom(
           padding: EdgeInsets.fromLTRB(10, 10, 10, 10),

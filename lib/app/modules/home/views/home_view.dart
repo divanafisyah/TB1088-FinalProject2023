@@ -39,12 +39,10 @@ class HomeView extends GetView<HomeController> {
               "assets/icons/search.png",
               fit: BoxFit.contain,
             ),
-          ),
-        ),
-      ],
-      backgroundColor: primaryBlue,
-      elevation: 0,
-    ),
-    );
+          )
+        )
+      ]
+        )
+        );
   }
 }
