@@ -4,9 +4,9 @@ import 'package:get/get.dart' show GetView;
 import '../controllers/login_controller.dart' show LoginController;
 
 void main() {
-  runApp(new MaterialApp(home: new LoginView(), routes: <String, WidgetBuilder>{
-    '/login': (context) => new LoginView(),
-    '/home': (context) => new HomeView(),
+  runApp(MaterialApp(home: LoginView(), routes: <String, WidgetBuilder>{
+    '/login': (context) => LoginView(),
+    '/home': (context) => HomeView(),
   }));
 }
 
