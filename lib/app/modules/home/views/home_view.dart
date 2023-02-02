@@ -61,61 +61,98 @@ class HomeView extends GetView<HomeController> {
               child: Column(children: [
                 Column(children: [
                   ClipPath(
-                      clipper: ClipInfoClass(),
-                      child: Container(
-                        padding: EdgeInsets.all(15),
-                        margin: EdgeInsets.symmetric(horizontal: 0),
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              Color.fromARGB(255, 255, 255, 255),
-                              Color.fromARGB(255, 255, 255, 255),
-                            ],
-                          ),
+                    clipper: ClipInfoClass(),
+                    child: Container(
+                      padding: EdgeInsets.all(15),
+                      margin: EdgeInsets.symmetric(horizontal: 0),
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            Color.fromARGB(255, 255, 255, 255),
+                            Color.fromARGB(255, 255, 255, 255),
+                          ],
                         ),
-                        child: Row(children: [
+                      ),
+                      child: Row(
+                        children: [
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
-                                children: const [Text("Total sampah yang telah kamu kumpulkan :",
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 0, 0, 0),
-                                  fontSize: 20, fontWeight: FontWeight.bold,
-                                ),
-                                )
+                                children: const [
+                                  Text(
+                                    "Total sampah yang telah kamu kumpulkan :",
+                                    style: TextStyle(
+                                      color: Color.fromARGB(255, 0, 0, 0),
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
                                 ],
                               )
                             ],
                           ),
                           Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 25),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Sampah(
-                            title: "Sampah",
-                            data: "74",
-                            satuan: "kg",
+                            padding: const EdgeInsets.symmetric(horizontal: 25),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Sampah(
+                                  title: "Sampah",
+                                  data: "74",
+                                  satuan: "kg",
+                                ),
+                                Sampah(
+                                  title: "Poin",
+                                  data: "88",
+                                  satuan: " poin",
+                                ),
+                              ],
+                            ),
                           ),
-                          Sampah(
-                            title: "Poin",
-                            data: "88",
-                            satuan: " poin",
-                          ),
-
-                        ]),
-                      )
-                        ]
-                      )
-                      )
+                        ],
+                      ),
+                    ),
                   )
-                ]
-                )
+                ])
               ]))
-        ]
-        )
-        );
+        ]));
+  }
+}
+
+class Item extends StatelessWidget {
+  Item({
+    Key? key,
+    required this.title,
+    required this.icon,
+  }) : super(key: key);
+
+  final String title;
+  final String icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          width: 50,
+          height: 50,
+          child: Image.asset(
+            icon,
+            fit: BoxFit.cover,
+          ),
+        ),
+        SizedBox(height: 5),
+        Text(
+          title,
+          style: TextStyle(
+            fontSize: 16,
+          ),
+        ),
+      ],
+    );
   }
 }
 
