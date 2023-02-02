@@ -1,3 +1,6 @@
+
+// ignore_for_file: prefer_const_constructors
+
 import 'package:final_project_2023/app/modules/home/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' show GetView;
@@ -29,7 +32,8 @@ class LoginView extends GetView<LoginController> {
           child: TextField(
             decoration: InputDecoration(
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                borderRadius: BorderRadius.all(Radius.circular(10.0),
+                ),
               ),
             ),
           ),

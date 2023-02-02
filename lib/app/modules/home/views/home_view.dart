@@ -66,12 +66,6 @@ class HomeView extends GetView<HomeController> {
                       padding: EdgeInsets.all(15),
                       margin: EdgeInsets.symmetric(horizontal: 0),
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            Color.fromARGB(255, 255, 255, 255),
-                            Color.fromARGB(255, 255, 255, 255),
-                          ],
-                        ),
                       ),
                       child: Row(
                         children: [
@@ -84,7 +78,7 @@ class HomeView extends GetView<HomeController> {
                                     "Total sampah yang telah kamu kumpulkan :",
                                     style: TextStyle(
                                       color: Color.fromARGB(255, 0, 0, 0),
-                                      fontSize: 20,
+                                      fontSize: 15,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   )
