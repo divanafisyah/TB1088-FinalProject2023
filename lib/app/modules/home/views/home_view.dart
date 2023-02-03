@@ -113,7 +113,6 @@ class HomeView extends GetView<HomeController> {
         ]));
   }
 }
-
 class Item extends StatelessWidget {
   Item({
     Key? key,
